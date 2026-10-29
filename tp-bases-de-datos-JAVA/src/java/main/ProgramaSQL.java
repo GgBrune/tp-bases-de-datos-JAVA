@@ -16,10 +16,11 @@ public class EjemploResultSetMySQL {
   public static void main(String[] args) {
 
     try {
+        // Conexión con la base de datos MySQL
         String driver = "com.mysql.cj.jdbc.Driver";
-        String url = "jdbc:mysql://localhost:3306/prueba?serverTimezone=UTC";
+        String url = "jdbc:mysql://localhost:32312/calzados_sa";
         String username = "root";
-        String password = "rootroot";
+        String password = "clave";
 
         // Load database driver if not already loaded.
         Class.forName(driver);
@@ -43,7 +44,7 @@ public class EjemploResultSetMySQL {
       
         while(resultSet.next()) {
             System.out.print(" DNI: " + resultSet.getString("DNI"));
-            System.out.print("; Nombre: "+resultSet.getString("nombre"));
+            System.out.print("; Nombre: "+ resultSet.getString("nombre"));
             System.out.print("; Email: " + resultSet.getString("email")) ;
             System.out.print("\n   ");
             System.out.print("\n   ");
